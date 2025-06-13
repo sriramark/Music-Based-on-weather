@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "91ef0d7a-cd2b-4020-9b12-01f00927ecfa",
+		"name": "Mood & Music AI API",
+		"description": "**Version:** 1.0.0  \n**Tech Stack:** FastAPI, Python, Pytest, OpenWeatherMap API, Google Gemini API, Last.fm API\n\n### Project Overview\n\nThis application serves as an intelligent song recommendation engine. It takes a user's current mood and city as input, analyzes the real-time weather, and determines if the weather contextually aligns with the user's mood.\n\nThe core logic is AI-driven, using the **Google Gemini API** to provide a nuanced analysis of the weather based on the city's climate. This avoids a rigid, hard-coded rules engine and demonstrates a modern approach to application development.\n\n### How to Use\n\nThis collection contains one request to test the primary `/recommend` endpoint.\n\n1. Ensure your FastAPI server is running locally (`uvicorn main:app --reload`).\n    \n2. Make sure your `.env` file is populated with valid API keys for OpenWeatherMap, Gemini, and Last.fm.\n    \n3. Select the **\"Get Song Recommendation\"** request.\n    \n4. In the **\"Body\"** tab, change the `mood` and `city` values as desired.\n    \n5. Click **\"Send\"** to see the API response.\n    \n\nStartFragment\n\n### API Endpoint\n\n**`POST /recommend`****Request Body**\n\n``` json\n{\n  \"mood\": \"Happy\",\n  \"city\": \"Ottapalam\"\n}\n\n ```\n\n**Success Response:**\n\n``` json\n{\n  \"analysis\": \"A human-readable analysis of the mood-weather match.\",\n  \"predicted_mood\": \"The mood predicted by the Gemini AI.\",\n  \"reason_for_prediction\": \"The AI's reasoning for its prediction.\",\n  \"song_recommendation\": {\n    \"title\": \"Song Title\",\n    \"artist\": \"Artist Name\"\n  }\n}\n\n ```",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25296448",
+		"_collection_link": "https://www.postman.com/crimson-astronaut-106494/my-workspace/collection/r94ac9c/mood-music-ai-api?action=share&source=collection_link&creator=25296448"
+	},
+	"item": [
+		{
+			"name": "Get Song Recommendation",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mood\":\"tensed\",\r\n    \"city\":\"pollachi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER_URL}}recommend/",
+					"host": [
+						"{{SERVER_URL}}recommend"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "## Endpoint: Recommend Mood-Based Songs\n\nThis endpoint allows users to receive song recommendations based on their current mood and location. By providing the mood and city, the API analyzes the input and returns a suitable song suggestion.\n\n### Request\n\n**Method:** POST  \n**URL:** `{{SERVER_URL}}recommend/`\n\n#### Request Body\n\nThe request body must be sent in JSON format and should include the following parameters:\n\n- **mood** (string): The current mood of the user (e.g., \"tensed\").\n    \n- **city** (string): The city where the user is located (e.g., \"pollachi\").\n    \n\n**Example Request Body:**\n\n``` json\n{\n  \"mood\": \"tensed\",\n  \"city\": \"pollachi\"\n}\n\n ```\n\n### Response\n\nOn a successful request, the API will return a JSON response with the following structure:\n\n- **analysis** (string): An analysis of the user's mood (currently empty).\n    \n- **predicted_mood** (string): The predicted mood based on the input (currently empty).\n    \n- **reason_for_prediction** (string): The reasoning behind the prediction (currently empty).\n    \n- **song_recommendation** (object): An object containing the recommended song details:\n    \n    - **title** (string): The title of the recommended song (currently empty).\n        \n    - **artist** (string): The artist of the recommended song (currently empty).\n        \n\n**Example Response:**\n\n``` json\n{\n  \"analysis\": \"\",\n  \"predicted_mood\": \"\",\n  \"reason_for_prediction\": \"\",\n  \"song_recommendation\": {\n    \"title\": \"\",\n    \"artist\": \"\"\n  }\n}\n\n ```\n\n### Status Codes\n\n- **200 OK**: The request was successful, and a song recommendation has been returned."
+			},
+			"response": []
+		}
+	]
+}
