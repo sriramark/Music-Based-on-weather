@@ -35,12 +35,13 @@ Tech Stack: FastAPI, Python, Pytest, OpenWeatherMap API, Google Gemini API, Last
 
    Scalability: It demonstrates a modern, scalable approach to solving complex, non-deterministic problems.
 
-    Future Work: A Self-Improving Model
-    While using a general-purpose AI like Gemini is powerful, a more cost-effective and specialized solution would be to train a custom machine learning model. The primary obstacle to this approach was the lack of large, publicly available datasets directly linking weather data to user moods.
+    ## Future Work: A Self-Improving Model
 
-    This application is designed to solve that problem. The main.py module can have a logging feature that records the user's mood and the AI's prediction for every request. Over time, this will build a valuable, proprietary dataset.
+    While using a general-purpose AI like Gemini is powerful, a more cost-effective and specialized solution would be to train a custom machine learning model. The primary obstacle to this approach is the lack of large, publicly available datasets directly linking weather data to user moods.
 
-    A future version of this project could use this logged data to train a custom classification model. This "learning model" would become more accurate and tailored to the application's specific use case over time, potentially reducing the reliance on the more expensive general-purpose AI for the core logic.
+    This application is designed to help solve that problem. The `main.py` module can include a logging feature that records the user's mood and the AI's prediction for every request. Over time, this will build a valuable, proprietary dataset.
+
+    A future version of this project could use this logged data to train a custom classification model. This "learning model" would become more accurate and tailored to the application's specific use case over time, potentially reducing reliance on the more expensive general-purpose AI for the core logic.
 
 # 4.  Setup and Installation
     Follow these steps to run the application locally.
