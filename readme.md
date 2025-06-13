@@ -54,9 +54,9 @@ Follow these steps to run the application locally.
 
 **Step 1: Create the Environment File**  
 In your project root, create a file named `.env` and add your API keys in the following format:  
-OWM_API_KEY="your_actual_openweathermap_api_key"  
-GEMINI_API_KEY="your_actual_gemini_api_key"  
-LASTFM_API_KEY="your_actual_lastfm_api_key"
+    OWM_API_KEY="your_actual_openweathermap_api_key"  
+    GEMINI_API_KEY="your_actual_gemini_api_key"  
+    LASTFM_API_KEY="your_actual_lastfm_api_key"
 
 **Step 2: Install Dependencies**  
 It is recommended to use a virtual environment.  
