@@ -92,5 +92,4 @@ PLOS One Scientific Journal: Weather impacts expressed sentiment - A large-scale
 Frontiers in Psychology: Season and Weather Effects on Travel-Related Mood - A study highlighting that different weather conditions (temperature, sunshine, wind) affect mood differently depending on context (e.g., travel mode).
 
 # 7. Resources
-
 Postman - https://www.postman.com/crimson-astronaut-106494/my-workspace/request/25296448-9c9e9128-64d8-42e1-a58d-579d772c1f35/?action=share&creator=25296448&ctx=documentation&active-environment=25296448-a2f533ba-345d-4973-a24d-9f070c3595fd
